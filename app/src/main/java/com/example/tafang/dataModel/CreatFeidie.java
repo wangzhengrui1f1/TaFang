@@ -1,4 +1,4 @@
-package com.example.tafang.model;
+package com.example.tafang.dataModel;
 //建造飞碟属性
 public class CreatFeidie {
     int cfdx;

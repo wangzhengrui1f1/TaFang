@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 
 import com.example.tafang.R;
-import com.example.tafang.model.Blog;
+import com.example.tafang.dataModel.Blog;
 import java.util.List;
 
 

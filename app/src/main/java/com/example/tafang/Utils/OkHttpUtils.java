@@ -1,4 +1,4 @@
-package com.example.tafang.utils;
+package com.example.tafang.Utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

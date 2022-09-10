@@ -1,4 +1,4 @@
-package com.example.tafang.utils;
+package com.example.tafang.Utils;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

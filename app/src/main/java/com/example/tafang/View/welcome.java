@@ -1,4 +1,4 @@
-package com.example.tafang.view;
+package com.example.tafang.View;
 
 import android.content.Intent;
 import android.graphics.Canvas;
@@ -21,12 +21,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.tafang.R;
-import com.example.tafang.model.Buff;
-import com.example.tafang.other.CreateFD;
+import com.example.tafang.dataModel.Buff;
+import com.example.tafang.Model.CreateFD;
 
 import java.util.Random;
 
-import static com.example.tafang.other.Data.mids;
+import static com.example.tafang.Model.Data.mids;
 
 
 public class welcome extends AppCompatActivity {

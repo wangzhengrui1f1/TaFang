@@ -1,4 +1,4 @@
-package com.example.tafang.view;
+package com.example.tafang.View;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -25,9 +25,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tafang.R;
-import com.example.tafang.surface.Mysurfaceview;
-import com.example.tafang.other.CreateFD;
-import com.example.tafang.other.Data;
+import com.example.tafang.MySurfaceView.Mysurfaceview;
+import com.example.tafang.Model.CreateFD;
+import com.example.tafang.Model.Data;
 
 import java.util.Random;
 import java.util.Timer;

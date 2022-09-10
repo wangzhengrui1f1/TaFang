@@ -1,4 +1,4 @@
-package com.example.tafang.model;
+package com.example.tafang.dataModel;
 
 public class Blog {
     int bid;

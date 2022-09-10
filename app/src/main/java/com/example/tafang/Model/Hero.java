@@ -1,4 +1,4 @@
-package com.example.tafang.other;
+package com.example.tafang.Model;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;

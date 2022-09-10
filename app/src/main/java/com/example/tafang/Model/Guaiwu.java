@@ -1,4 +1,4 @@
-package com.example.tafang.other;
+package com.example.tafang.Model;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -12,22 +12,22 @@ import android.util.Log;
 
 import com.example.tafang.R;
 
-import static com.example.tafang.other.CreateFD.boshu;
-import static com.example.tafang.other.CreateFD.isgetpao;
-import static com.example.tafang.other.CreateFD.qflag;
-import static com.example.tafang.other.CreateFD.ta1gj1;
-import static com.example.tafang.other.CreateFD.ta1gj2;
-import static com.example.tafang.other.CreateFD.ta1gj3;
-import static com.example.tafang.other.CreateFD.ta2gj1;
-import static com.example.tafang.other.CreateFD.ta2gj2;
-import static com.example.tafang.other.CreateFD.ta2gj3;
-import static com.example.tafang.other.CreateFD.ta3gj1;
-import static com.example.tafang.other.CreateFD.ta3gj2;
-import static com.example.tafang.other.CreateFD.ta3gj3;
-import static com.example.tafang.other.CreateFD.yxkx;
-import static com.example.tafang.other.Data.getGw1blood;
-import static com.example.tafang.other.Data.getGw2blood;
-import static com.example.tafang.other.Data.getGw3blood;
+import static com.example.tafang.Model.CreateFD.boshu;
+import static com.example.tafang.Model.CreateFD.isgetpao;
+import static com.example.tafang.Model.CreateFD.qflag;
+import static com.example.tafang.Model.CreateFD.ta1gj1;
+import static com.example.tafang.Model.CreateFD.ta1gj2;
+import static com.example.tafang.Model.CreateFD.ta1gj3;
+import static com.example.tafang.Model.CreateFD.ta2gj1;
+import static com.example.tafang.Model.CreateFD.ta2gj2;
+import static com.example.tafang.Model.CreateFD.ta2gj3;
+import static com.example.tafang.Model.CreateFD.ta3gj1;
+import static com.example.tafang.Model.CreateFD.ta3gj2;
+import static com.example.tafang.Model.CreateFD.ta3gj3;
+import static com.example.tafang.Model.CreateFD.yxkx;
+import static com.example.tafang.Model.Data.getGw1blood;
+import static com.example.tafang.Model.Data.getGw2blood;
+import static com.example.tafang.Model.Data.getGw3blood;
 
 
 public class Guaiwu {
