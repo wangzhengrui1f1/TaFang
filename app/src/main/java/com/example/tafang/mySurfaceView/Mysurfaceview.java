@@ -1,4 +1,4 @@
-package com.example.tafang.MySurfaceView;
+package com.example.tafang.mySurfaceView;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -14,10 +14,10 @@ import android.view.SurfaceView;
 import android.view.View;
 
 import com.example.tafang.R;
-import com.example.tafang.Model.Data;
-import com.example.tafang.Map.MyMap;
-import com.example.tafang.Model.CreateFD;
-import com.example.tafang.Map.SelectMap;
+import com.example.tafang.model.Data;
+import com.example.tafang.map.MyMap;
+import com.example.tafang.model.CreateFD;
+import com.example.tafang.map.SelectMap;
 
 
 public class Mysurfaceview extends SurfaceView implements SurfaceHolder.Callback, Runnable {

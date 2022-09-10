@@ -1,12 +1,12 @@
-package com.example.tafang.Model;
+package com.example.tafang.model;
 
-import com.example.tafang.Map.SelectMap;
+import com.example.tafang.map.SelectMap;
 import com.example.tafang.dataModel.Buff;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.tafang.Model.Data.money;
+import static com.example.tafang.model.Data.money;
 
 public class CreateFD {
     public static int cfenshu=0;//建造飞碟 每次移动的份数

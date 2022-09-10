@@ -1,4 +1,4 @@
-package com.example.tafang.Map;
+package com.example.tafang.map;
 
 public class SelectMap {
     public static int mapSum=0;//第几张地图

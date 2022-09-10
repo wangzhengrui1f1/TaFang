@@ -1,4 +1,4 @@
-package com.example.tafang.Model;
+package com.example.tafang.model;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -12,8 +12,25 @@ import android.util.Log;
 
 import com.example.tafang.R;
 
+import static com.example.tafang.model.CreateFD.boshu;
+import static com.example.tafang.model.CreateFD.isgetpao;
+import static com.example.tafang.model.CreateFD.qflag;
+import static com.example.tafang.model.CreateFD.ta1gj1;
+import static com.example.tafang.model.CreateFD.ta1gj2;
+import static com.example.tafang.model.CreateFD.ta1gj3;
+import static com.example.tafang.model.CreateFD.ta2gj1;
+import static com.example.tafang.model.CreateFD.ta2gj2;
+import static com.example.tafang.model.CreateFD.ta2gj3;
+import static com.example.tafang.model.CreateFD.ta3gj1;
+import static com.example.tafang.model.CreateFD.ta3gj2;
+import static com.example.tafang.model.CreateFD.ta3gj3;
+import static com.example.tafang.model.CreateFD.yxkx;
+import static com.example.tafang.model.Data.getGw1blood;
+import static com.example.tafang.model.Data.getGw2blood;
+import static com.example.tafang.model.Data.getGw3blood;
 
-public class Guaiwu2 {
+
+public class Guaiwu {
     private int position_x,position_y;//怪物的位置,指的是图片左下角的坐标
     private int toX,toY;//怪物要去的位置
     private int leixing;//怪物的类型
@@ -62,14 +79,14 @@ public class Guaiwu2 {
     private final int SW1=50;//定义怪物死亡挣到的钱为
     private final int SW2=100;//定义怪物死亡挣到的钱为
     private final int SW3=150;//定义怪物死亡挣到的钱为
-    private int gw1blood= Data.getGw1blood();//定义怪物1血量
-    private int gw2blood= Data.getGw2blood();//定义怪物2血量
-    private  int gw3blood= Data.getGw3blood();//定义怪物12血量
+    private int gw1blood=getGw1blood();//定义怪物1血量
+    private int gw2blood=getGw2blood();//定义怪物2血量
+    private  int gw3blood=getGw3blood();//定义怪物12血量
     //炮弹图1 flag 1 2控制炮弹 3控制生成x
     private Bitmap paos1,baozha1;
     int paox,paoy,paoflag1=0,paoflag2=0,paoflag3;
     private int[] left=new int[]{R.drawable.js1gj6,R.drawable.js1gj7,R.drawable.js1gj8,R.drawable.js1gj9};
-    public Guaiwu2(int[][] map, int leixing, Resources resources, int xW, int xH)
+    public Guaiwu(int[][] map,int leixing, Resources resources,int xW,int xH)
     {
       this.leixing=leixing;
         this.map=map;
@@ -132,6 +149,7 @@ public class Guaiwu2 {
                 for(int j=0;j<4;j++)
                 {
                     jl2[i][j]=Bitmap.createBitmap(gw2,j*gw2W/4,i*gw2H/4,gw2W/4,gw2H/4);
+                    //jl2[i][j]=Bitmap.createBitmap(bs,j*gw2W,i*gw2H,gw2W,gw2H);
                 }
             }
             gwH=(int)(xH*gw2Hbili);gwW=(int)(xW*gw2Wbili);
@@ -183,7 +201,7 @@ public class Guaiwu2 {
     public void drawgw(Canvas canvas, Paint paint)//绘制自己
     {
         //全屏炮弹
-        if(CreateFD.qflag==1|| CreateFD.isgetpao==0){
+        if(qflag==1||isgetpao==0){
             paodanmei2(canvas,paint);
         }
 
@@ -210,10 +228,10 @@ public class Guaiwu2 {
                     this.position_y+=sudu;
                 }else if(fangxiang==1)
                 {
-                    this.position_x+=sudu;
+                    this.position_x-=sudu;
                 }else if(fangxiang==2)
                 {
-                    this.position_x-=sudu;
+                    this.position_x+=sudu;
                 }else
                 {
                     this.position_y-=sudu;
@@ -241,9 +259,13 @@ public class Guaiwu2 {
             xia=xiaY(this.position_y)<12?xiaY(this.position_y):12;
             this.sudu=4;
             initPaint();
+
+            if(yxkx==1){
+                yxkx=0;
+                kouxue(10);
+            }
             for(int i=shang;i<=xia;i++) {
                 for(int j=zuo;j<=you;j++) {
-
                     //如果在范围内 this.position_x目标X  zhongX(j)防御塔x
                     if(length(this.position_x+xW,this.position_y-xH,zhongX(j),zhongY(i))<10*xW)
                     {
@@ -261,13 +283,13 @@ public class Guaiwu2 {
                             }
                             jiguang--;
 
-                            this.nowblood-= CreateFD.ta1gj1;
+                            this.nowblood-=ta1gj1;
                         }else if(map[i][j]==-11)
                         {
                             paint.setStrokeWidth(1+xW/23);
                             paint.setColor(Color.RED);//紫色
                             canvas.drawLine(this.position_x+xW/2,this.position_y-xH/2,zhongX(j),zhongY(i),paint);
-                            this.nowblood-= CreateFD.ta1gj2;
+                            this.nowblood-=ta1gj2;
                         }else if(map[i][j]==-111) {
                             paint.setStrokeWidth(1+xW/25);
                             paint.setColor(Color.RED);
@@ -283,7 +305,7 @@ public class Guaiwu2 {
                             }
                             jiguang2--;
                             CreatFeidie(canvas,paint);
-                            this.nowblood-= CreateFD.ta1gj3;
+                            this.nowblood-=ta1gj3;
                         }else if(map[i][j]==-2)
                         {
                             paint.setStrokeWidth(1+xW/23);
@@ -291,13 +313,13 @@ public class Guaiwu2 {
                             canvas.drawLine(this.position_x+xW/2,this.position_y-xH/2,zhongX(j),zhongY(i),paint);
                             canvas.drawBitmap(texiao2[1][0],null,new Rect(position_x,position_y-gwH,
                                     position_x+gwW,position_y),paint);
-                            this.nowblood-= CreateFD.ta2gj1;
+                            this.nowblood-=ta2gj1;
                         }else if(map[i][j]==-22)
                         {
                             paint.setStrokeWidth(1+xW/23);
                             paint.setColor(Color.rgb(243,104,11));//橘色
                             canvas.drawLine(this.position_x+xW/2,this.position_y-xH/2,zhongX(j),zhongY(i),paint);
-                            this.nowblood-= CreateFD.ta2gj2;
+                            this.nowblood-=ta2gj2;
                         }else if(map[i][j]==-222)
                         {
                             paint.setStrokeWidth(1+xW/23);
@@ -316,7 +338,7 @@ public class Guaiwu2 {
                                         this.position_y - xH / 2 + xH / 3+ zidan * dingzhiy-gwH/2 ,paint);
                             }
                             zidan--;
-                            this.nowblood-= CreateFD.ta2gj3;
+                            this.nowblood-=ta2gj3;
                         }else if(map[i][j]==-3)
                         {
                             paint.setStrokeWidth(1+xW/23);
@@ -333,7 +355,7 @@ public class Guaiwu2 {
                             }
                             addM++;
                             this.sudu=3;
-                            this.nowblood-= CreateFD.ta3gj1;
+                            this.nowblood-=ta3gj1;
                         }else if(map[i][j]==-33)
                         {
                             paint.setStrokeWidth(1+xW/23);
@@ -350,7 +372,7 @@ public class Guaiwu2 {
                             }
                             addM++;
                             this.sudu=3;
-                            this.nowblood-= CreateFD.ta3gj2;
+                            this.nowblood-=ta3gj2;
                         }else if(map[i][j]==-333)
                         {
                             paint.setStrokeWidth(1+xW/23);
@@ -395,7 +417,7 @@ public class Guaiwu2 {
                             }
                             zidan--;
                             this.sudu=3;
-                            this.nowblood-= CreateFD.ta3gj3;
+                            this.nowblood-=ta3gj3;
                         }
 
                     }
@@ -545,7 +567,7 @@ private void CreatFeidie(Canvas canvas,Paint paint) {
         //炮弹落点
         int mo=0;
         int h=0;
-        CreateFD.isgetpao=0;
+        isgetpao=0;
         //炮弹妹
   //      canvas.drawBitmap(paodanmei,null,new Rect(xW*2,
 //                xH*4,xW*10,xH*12),paint);
@@ -575,12 +597,12 @@ private void CreatFeidie(Canvas canvas,Paint paint) {
             paoflag2++;
         }
         if(paoflag2>=10){
-            this.nowblood-=300+(int) (nowblood*0.03)+ CreateFD.boshu*25;
+            this.nowblood-=300+(int) (nowblood*0.03)+boshu*25;
             //sudu++;
             paoflag1=1;
             paoflag2=0;
             paoflag3=0;
-            CreateFD.isgetpao=1;
+            isgetpao=1;
         }
 
 
@@ -589,5 +611,9 @@ private void CreatFeidie(Canvas canvas,Paint paint) {
 
     public void kouxue(int jian){
         this.nowblood-=jian;
+    }
+
+    public int getxue(){
+        return this.nowblood;
     }
 }

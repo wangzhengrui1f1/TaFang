@@ -1,4 +1,4 @@
-package com.example.tafang.Map;
+package com.example.tafang.map;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -11,11 +11,11 @@ import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.util.Log;
 
-import com.example.tafang.Model.CreateFD;
-import com.example.tafang.Model.Data;
-import com.example.tafang.Model.Gwcreat;
-import com.example.tafang.Model.Hero;
-import com.example.tafang.MySurfaceView.Mysurfaceview;
+import com.example.tafang.model.CreateFD;
+import com.example.tafang.model.Data;
+import com.example.tafang.model.Gwcreat;
+import com.example.tafang.model.Hero;
+import com.example.tafang.mySurfaceView.Mysurfaceview;
 import com.example.tafang.R;
 
 

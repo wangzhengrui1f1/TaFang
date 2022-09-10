@@ -1,4 +1,4 @@
-package com.example.tafang.View;
+package com.example.tafang.view;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tafang.R;
-import com.example.tafang.Model.Data;
+import com.example.tafang.model.Data;
 
 public class SelectHome extends Activity {
     TextView lantu,jiangli,shop,paihang,shangdian,shezhi,zhengtu;

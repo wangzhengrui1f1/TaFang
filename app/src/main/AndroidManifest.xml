@@ -8,21 +8,21 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.tafang.View.MainActivity"
+        <activity android:name="com.example.tafang.view.MainActivity"
                    android:screenOrientation="landscape">
 
         </activity>
-        <activity android:name="com.example.tafang.View.welcome" android:screenOrientation="landscape">
+        <activity android:name="com.example.tafang.view.welcome" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.tafang.View.SelectHome" android:screenOrientation="landscape">
+        <activity android:name="com.example.tafang.view.SelectHome" android:screenOrientation="landscape">
 
         </activity>
-        <activity android:name="com.example.tafang.View.GameHomeActivity">
+        <activity android:name="com.example.tafang.view.GameHomeActivity">
 
         </activity>
     </application>

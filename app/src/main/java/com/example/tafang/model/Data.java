@@ -1,4 +1,4 @@
-package com.example.tafang.Model;
+package com.example.tafang.model;
 
 import android.content.Context;
 import android.media.AudioManager;

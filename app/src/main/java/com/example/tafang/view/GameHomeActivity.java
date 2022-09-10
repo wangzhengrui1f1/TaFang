@@ -1,4 +1,4 @@
-package com.example.tafang.View;
+package com.example.tafang.view;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.tafang.R;
-import com.example.tafang.Model.Data;
+import com.example.tafang.model.Data;
 
 
 public class GameHomeActivity extends Activity {

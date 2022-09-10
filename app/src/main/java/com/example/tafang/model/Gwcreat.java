@@ -1,4 +1,4 @@
-package com.example.tafang.Model;
+package com.example.tafang.model;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -10,24 +10,24 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.util.Log;
 
-import com.example.tafang.Map.SelectMap;
-import com.example.tafang.MySurfaceView.Mysurfaceview;
+import com.example.tafang.map.SelectMap;
+import com.example.tafang.mySurfaceView.Mysurfaceview;
 import com.example.tafang.R;
 
 import java.util.Random;
 
-import static com.example.tafang.Model.CreateFD.boshu;
+import static com.example.tafang.model.CreateFD.boshu;
 
-import static com.example.tafang.Model.CreateFD.gwnowx;
-import static com.example.tafang.Model.CreateFD.gwnowy;
-import static com.example.tafang.Model.CreateFD.yibojieshu;
-import static com.example.tafang.Model.CreateFD.yxkxid;
-import static com.example.tafang.Model.Data.getGw1blood;
-import static com.example.tafang.Model.Data.getGw2blood;
-import static com.example.tafang.Model.Data.getGw3blood;
-import static com.example.tafang.Model.Data.setGw1blood;
-import static com.example.tafang.Model.Data.setGw2blood;
-import static com.example.tafang.Model.Data.setGw3blood;
+import static com.example.tafang.model.CreateFD.gwnowx;
+import static com.example.tafang.model.CreateFD.gwnowy;
+import static com.example.tafang.model.CreateFD.yibojieshu;
+import static com.example.tafang.model.CreateFD.yxkxid;
+import static com.example.tafang.model.Data.getGw1blood;
+import static com.example.tafang.model.Data.getGw2blood;
+import static com.example.tafang.model.Data.getGw3blood;
+import static com.example.tafang.model.Data.setGw1blood;
+import static com.example.tafang.model.Data.setGw2blood;
+import static com.example.tafang.model.Data.setGw3blood;
 
 /*
  *
